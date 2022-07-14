@@ -15,11 +15,13 @@ app.get('/api/allNames', (_, res) => {
   res.send(pokeNames);
 })
 
+// What is the different between params?
 app.get('/api/:name', (req, res) => {
   const pokemonName = req.params.name;
   res.send(pokemonName);
 })
 
+// ... and body?
 app.post('/api/post', (req, res) => {
   const newPokemon = req.body;
   pokeData.push(newPokemon);
