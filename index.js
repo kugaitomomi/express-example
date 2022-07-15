@@ -1,33 +1,23 @@
-const express = require('express')
-const app = express();
-const pokeData = require("./pokemon.json").pokemon;
+// first steps - how do we get a package.json file?
+// how do we install the express module?
 
-const PORT = 3000;
+// what is this line below? What is it doing?
+const express = require('express')
+// what do we need to do with the express module?
+// get pokemon data here - what's the data type?
+
+// what environment variable(s) do we need?
 
 // How do we enable JSON parsing of incoming requests into req.body?
 
-app.get('/', (req, res) => {
-  res.send(pokeData)
-})
+app.get()
 
-app.get('/api/allNames', (_, res) => {
-  const pokeNames = pokeData.map(pokemon => pokemon.name);
-  res.send(pokeNames);
-})
+app.get()
 
 // What is the different between params?
-app.get('/api/:name', (req, res) => {
-  const pokemonName = req.params.name;
-  res.send(pokemonName);
-})
+app.get()
 
 // ... and body?
-app.post('/api/post', (req, res) => {
-  const newPokemon = req.body;
-  pokeData.push(newPokemon);
-  res.send(pokeData);
-})
+app.post()
 
-app.listen(PORT, () => {
-  console.log(`Listening on http://localhost:${PORT}`);
-})
+app.listen(/* what goes here? */)
